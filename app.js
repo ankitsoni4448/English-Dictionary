@@ -2,7 +2,11 @@ const inputEl = document.getElementById("input")
 
 
 function fetchAPI(word){
-    console.log(word);
+   // console.log(word);
+   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+
+   const result = fetch(url).then((res) => res.json());
+   console.log(result);
 }
 
 
